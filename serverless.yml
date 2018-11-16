@@ -33,3 +33,33 @@ functions:
       - http:
           path: hello
           method: get
+  list:
+    handler: controllers/UserController.getUsers
+    events:
+      - http:
+          path: users
+          method: get
+  get:
+    handler: controllers/UserController.getUser
+    events:
+      - http:
+          path: users/{id}
+          method: get
+  create:
+    handler: controllers/UserController.createUser
+    events:
+      - http:
+          path: users
+          method: post
+  update:
+    handler: controllers/UserController.updateUser
+    events:
+      - http:
+          path: users/{id}
+          method: put
+  delete:
+    handler: controllers/UserController.deleteUser
+    events:
+      - http:
+          path: users/{id}
+          method: delete
