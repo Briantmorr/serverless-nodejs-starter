@@ -33,33 +33,93 @@ functions:
       - http:
           path: hello
           method: get
-  list:
+  usersList:
     handler: controllers/UserController.getUsers
     events:
       - http:
           path: users
           method: get
-  get:
+  usersGet:
     handler: controllers/UserController.getUser
     events:
       - http:
           path: users/{id}
           method: get
-  create:
+  usersCreate:
     handler: controllers/UserController.createUser
     events:
       - http:
           path: users
           method: post
-  update:
+  usersUpdate:
     handler: controllers/UserController.updateUser
     events:
       - http:
           path: users/{id}
           method: put
-  delete:
+  usersDelete:
     handler: controllers/UserController.deleteUser
     events:
       - http:
           path: users/{id}
+          method: delete
+  papersList:
+    handler: controllers/PaperController.getPapers
+    events:
+      - http:
+          path: papers
+          method: get
+  papersGet:
+    handler: controllers/PaperController.getPaper
+    events:
+      - http:
+          path: papers/{id}
+          method: get
+  papersCreate:
+    handler: controllers/PaperController.createPaper
+    events:
+      - http:
+          path: papers
+          method: post
+  papersUpdate:
+    handler: controllers/PaperController.updatePaper
+    events:
+      - http:
+          path: papers/{id}
+          method: put
+  papersDelete:
+    handler: controllers/PaperController.deletePaper
+    events:
+      - http:
+          path: papers/{id}
+          method: delete
+  groupsList:
+    handler: controllers/GroupController.getGroups
+    events:
+      - http:
+          path: groups
+          method: get
+  groupsGet:
+    handler: controllers/GroupController.getGroup
+    events:
+      - http:
+          path: groups/{id}
+          method: get
+  groupsCreate:
+    handler: controllers/GroupController.createGroup
+    events:
+      - http:
+          path: groups
+          method: post
+  groupsUpdate:
+    handler: controllers/GroupController.updateGroup
+    events:
+      - http:
+          path: groups/{id}
+          method: put
+  groupsDelete:
+    handler: controllers/GroupController.deleteGroup
+    events:
+      - http:
+          path: groups/{id}
           method: delete
